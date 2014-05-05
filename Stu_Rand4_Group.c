@@ -6,12 +6,11 @@
 int studentrandom(int a)
 {
 	int i;
-	srand((int)time(NULL));
 	i=random(a);
 	return i;
 }
 
-void suiji(int a[40])
+void suiji(int a[],int n)
 {
 	int i,j=0,k;
 	int flag;
@@ -40,6 +39,14 @@ void display(int a[],int n)
 		printf("%d - %s ", info[a[i]].id, info[a[i]].name);
     }
 } 
+int main(){
+	int a[40];
+	int n =(int)sizeof(a);
+	n /= 4;
+	srand((int)time(NULL));
+	suiji(a,n);
+	display(a,n);
+}
 
 
 
