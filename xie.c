@@ -28,3 +28,18 @@ void suiji(int a[40])
 	}
     
 }
+void display(int a[],int n)
+{
+    int i;
+    for(i = 0; i < n; i++)
+	{
+		if(i%4 == 0)
+		{
+			printf("\n第%d组: ",i/4+1);
+		}
+		printf("%d - %s ", info[a[i]].id, info[a[i]].name);
+    }
+} 
+
+
+
